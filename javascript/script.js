@@ -416,43 +416,96 @@
 //         card.remove()
 //    
 
-console.log("ITs the first line")
-try{
-    let age=17;
-    if(age<18){
-        throw new Error("You are not allowed")
-    }
-    let sample;
-    for(let i=0;i<10;i++){
-        sample=i
-    }
-    // console.log(sample)
-}
-catch(e){
-    console.log(e)
-    // throw new Error("Something went wrong")
-}finally{
-    console.log("finally block")
+// console.log("ITs the first line")
+// try{
+//     let age=17;
+//     if(age<18){
+//         throw new Error("You are not allowed")
+//     }
+//     let sample;
+//     for(let i=0;i<10;i++){
+//         sample=i
+//     }
+//     // console.log(sample)
+// }
+// catch(e){
+//     console.log(e)
+//     // throw new Error("Something went wrong")
+// }finally{
+//     console.log("finally block")
    
-}
-console.log("Its the last line")
+// }
+// console.log("Its the last line")
 
 
-async function getData(){
-    try{
-        const response=await fetch("https://dummyjson.com/products")
-    const data=await response.json()
-    console.log(response.status)
-    if(!response.ok){
-        throw new Error("Something went wrong")
-    }
-    data.products.forEach((product)=>{
-        console.log(product.title)
-    })
-    }
-    catch(e){
-        console.log(e)
+// async function getData(){
+//     try{
+//         const response=await fetch("https://dummyjson.com/products/add",{
+//             method:"POST",
+//             headers:{
+//                 "Content-Type":"application/json"
+//             },
+//             body:JSON.stringify({
+//                 title: 'BMW Pencil',
+//                 description: 'It is a pencil made by BMW',
+//                 price: 99,
+//                 discountPercentage: 5.9,
+//                 rating: 4.9,
+//                 stock: 100,
+//                 brand: 'BMW',
+//                 category: 'pencil'
+//             })
+//         })
+
+//         console.log(response)
+//         if(!response.ok){
+//             throw new Error("Something went wrong")
+//         }
+//     const data=await response.json()
+//     console.log(data)
+//     // data.products.forEach((product)=>{
+//     //     console.log(product.title)
+//     // })
+//     }
+//     catch(e){
+//         console.log(e)
         
-    }
-}
-getData()
+//     }
+// }
+// getData()
+
+// let obj={
+//     title:"macbook",
+//     price:453345
+// }
+
+// localStorage.setItem("obj",JSON.stringify(obj))
+
+// localStorage.setItem("name","Yash")
+// localStorage.setItem("age",24)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+// console.log(JSON.parse(localStorage.getItem("obj")))
+
+// localStorage.removeItem("age")
+// localStorage.clear() ///clear everything
+
+// sessionStorage.setItem("name","Yash")
+// sessionStorage.setItem("age",24)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("age")
+
+
+// document.cookie="name=yash; expires=Fri, 20 Feb 2026 23:59:59 UTC;"
+// document.cookie="age=45; expires=Fri, 20 Feb 2026 23:59:59 UTC;"
+
+// async function sample(){
+//     await fetch("http://127.0.0.1:5504/javascript/index.html")
+// }
+// sample()
+
