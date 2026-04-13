@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import style from "../css/Article.module.css"
 import style1 from "../css/HomePage.module.css"
-
+// import styled from "styled-components"
+import styled from "@emotion/styled"
+import { css } from '@emotion/react'
 function Article(props) {
   const [count, setCount]=useState(0)
 
@@ -16,12 +18,21 @@ function Article(props) {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
       <h2>{count}</h2>
       <button className={style.btn} onClick={handleIncrement}>Increment</button>
-      <button style={{backgroundColor:"blue", color:"white", width:"100px", height:"30px"}}>Decrement</button>
+      <button css={{backgroundColor:"green", color:"white"}}> First</button>
+      <Button>Submit</Button>
+      <Button yellow >Click Me!</Button>
     </div>
   )
 }
 
 export default Article
+
+const Button=styled.button`
+background-color: ${props=>props.yellow ? "yellow" : "red"};  
+color: white;
+width: 100px;
+height: 30px;
+`
 
 // import React from 'react'
 // import { add as addition } from '../utility'
