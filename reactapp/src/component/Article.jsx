@@ -21,6 +21,7 @@ function Article(props) {
       <button css={{backgroundColor:"green", color:"white"}}> First</button>
       <Button>Submit</Button>
       <Button yellow >Click Me!</Button>
+      <button className="bg-blue-500 text-white w-24 h-8 text-center border border-white">Tailwind </button>
     </div>
   )
 }
