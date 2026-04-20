@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import style from "../css/Article.module.css"
 import style1 from "../css/HomePage.module.css"
 // import styled from "styled-components"
@@ -6,7 +6,11 @@ import styled from "@emotion/styled"
 import { css } from '@emotion/react'
 function Article(props) {
   const [count, setCount]=useState(0)
+  const [name, setName]=useState("Alex")
 
+  useEffect(()=>{
+    console.log("Component Did Mount")
+  },[name])
 
   const handleIncrement=()=>{
     setCount(count+1)
@@ -15,6 +19,8 @@ function Article(props) {
     <div>
       <h1>Article</h1>
        <h3>{props.title}</h3> 
+       <h2>{name}</h2>
+       <button onClick={()=>setName("John")}>Change Name</button>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
       <h2>{count}</h2>
       <button className={style.btn} onClick={handleIncrement}>Increment</button>
