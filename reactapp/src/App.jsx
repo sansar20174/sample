@@ -14,6 +14,7 @@ function App() {
       <HomePage />
       <TopBar />
       <Article title={title} />
+      
     </>
   )
 }
