@@ -3,6 +3,7 @@ import './App.css'
 import TopBar from './component/TopBar'
 import Article from './component/Article'
 import HomePage from './component/HomePage'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
 
@@ -11,11 +12,13 @@ function App() {
 
   return (
     <>
-      <HomePage />
-      <TopBar />
-      <Article title={title} />
-      
+    <Routes>
+    <Route path="/" element={<HomePage setTitle={setTitle} />} />
+    <Route path="/article" element={<Article title={title} />} />
+    <Route path="/contact" element={<Contact />} />
+    </Routes>
     </>
+
   )
 }
 

@@ -5,9 +5,9 @@ function TopBar() {
     <div>
       <h1>Logo</h1>
       <ul>
-        <li>Entertainment</li>
-        <li>Sports</li>
-        <li>Politics</li>
+        <link to="/">HomePage</link>
+        <link to="/article">Article</link>
+        <link to="/contact">Contact</link>
       </ul>
     </div>
   )
